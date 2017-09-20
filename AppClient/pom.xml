@@ -23,13 +23,20 @@
 
 				<configuration>
 					<nodeVersion>v6.10.0</nodeVersion>
-					<npmVersion>3.10.10</npmVersion>
-					<workingDirectory>src/</workingDirectory>
+					<npmVersion>4.4.1</npmVersion>
+					<!-- <workingDirectory>/</workingDirectory> -->
 				</configuration>
 
 				<executions>
 					<execution>
-						<id>Cleaning up unused npm modules</id>
+						<id>install node and npm</id>
+						<goals>
+							<goal>install-node-and-npm</goal>
+						</goals>
+					</execution>
+
+					<execution>
+						<id>npm install</id>
 						<goals>
 							<goal>npm</goal>
 						</goals>
@@ -46,12 +53,12 @@
 							<arguments>install</arguments>
 						</configuration>
 					</execution>
-
 					<execution>
-						<id>Running build</id>
+						<id>npm run build</id>
 						<goals>
 							<goal>npm</goal>
 						</goals>
+
 						<configuration>
 							<arguments>run build</arguments>
 						</configuration>
