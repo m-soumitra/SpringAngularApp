@@ -70,8 +70,8 @@
 
 		<resources>
 			<resource>
-				<directory>target/AppClient</directory>
-				<targetPath>static</targetPath>
+				<targetPath>META-INF/resources</targetPath>
+				<directory>${basedir}/dist</directory>
 			</resource>
 		</resources>
 
